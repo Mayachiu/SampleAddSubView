@@ -11,9 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let subView = Bundle.main.loadNibNamed("SecondView", owner: self, options: nil)?.first as? UIView
+        view.frame = self.view.bounds
+        self.view.addSubview(subView!)
     }
-
-
 }
 
